@@ -12,6 +12,11 @@ export class BankController {
     return res.status(200).json(this.bankService.getStatus(ade, bank));
   }
 
+  @Get('/auth')
+  getRoles(@Res() res: Response) {
+    return res.status(200).json(this.bankService.getRoles());
+  }
+
   @Patch(':bank/aprovacao/:ade')
   approve(@Param() params, @Res() res: Response) {
     const { ade, bank } = params;
