@@ -20,9 +20,9 @@ export class BankService {
 
   getRoles() {
     return [
-      { id: 11, name: 'fred' },
-      { id: 22, name: 'davi' },
-      { id: 33, name: 'storm' },
+      { id: 1, name: 'fred' },
+      { id: 2, name: 'davi' },
+      { id: 3, name: 'storm' },
     ];
   }
 
@@ -34,7 +34,7 @@ export class BankService {
 
   cancel(ade: string, bank: string) {
     if (Number(ade[ade.length - 1]) >= 1) {
-      return { ade, bank, cancelled: true };
+      return { ade, bank, cancelled: true};
     } else return { ade, bank, cancelled: false };
   }
 }
